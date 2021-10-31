@@ -1,0 +1,5 @@
+mixin phone(phoneNumber, phoneIcon, phoneClass)
+  div(class="phone phone--" + phoneClass)
+    if phoneIcon
+      img(src="./assets/images/icon-phone.svg", class="phone__icon" alt="")
+    a(href="tel:" + phoneNumber, class="phone__text phone__text--" + phoneClass)=phoneNumber

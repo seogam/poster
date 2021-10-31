@@ -1,0 +1,25 @@
+-
+  var footerItemsMenu = [
+    {id: 0, name: 'Home', url: '#top'},
+    {id: 1, name: 'About', url: '#about'},
+    {id: 2, name: 'Services', url: '#services'},
+    {id: 3, name: 'Resources', url: '#resources'},
+    {id: 4, name: 'Contact us', url: '#contact-us'}
+  ]
+
+footer(class="footer")
+  div(class="footer__inner") 
+    div(class="footer__logo")
+      img(src="./assets/images/logo-footer.svg", alt="")
+
+    +menu('footer-menu', footerItemsMenu)
+
+    //- nav
+    //-   ul(class="footer__menu menu")
+    //-     each item in footerMenuItem
+    //-       li(class="menu__item")
+    //-         a(class="menu__link" href=item.url)=item.name
+    
+    div(class="contacts")
+      +phone('+998 91 585 85 95', true)
+      +address('Tashkent, T. Shevchenko st, 21A', 'footer')

@@ -1,0 +1,30 @@
+-
+  var topMenuLi = [
+    {id: 0, name: 'Особенности', url: '#top'},
+    {id: 1, name: 'Преимущества', url: '#about'},
+    {id: 2, name: 'Services', url: '#services'},
+    {id: 3, name: 'Resources', url: '#resources'},
+    {id: 4, name: 'Contact us', url: '#contact-us'},
+  ]
+
+header(class="header")
+  
+  div(class="header__top")
+    div(class="header__container")
+      +logo('./assets/images/logo.png')
+      +menu('top-menu', topMenuLi)
+      div(class="contacts")
+        +phone('+(99871) 256 50 09', true, 'header')
+        +address('Узбекистан, Ташкент, ул. Афрасиаб 16', 'header')
+      //- +lang(['EN', 'RU'])
+
+  div(class="header__inner")
+    div(class="header__description")
+      h1(class="header__title block__title") 
+        | Автоматизация кафе
+      div(class="header__text")
+        p Онлайн-касса для кафе: приложение для Android-планшета или iPad и всего за $19 в месяц.
+    
+    div(class="header__video")
+      video(autoplay='' loop='' muted='' poster='https://www.pexels.com/assets/videos/free-videos-7daa2ef41a140f70c757ce91913a4ecb90570b7d7cd2b401bae868350e02c83a.jpg')
+        source(src='./assets/videos/video.mp4' type='video/mp4')

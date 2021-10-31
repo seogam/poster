@@ -1,0 +1,41 @@
+@import '../../../assets/sass/__variables'
+.about
+  padding-bottom: 100px
+  margin: 0 auto
+  max-width: 1200px
+
+  &__title
+    text-align: center
+
+    &--big
+      margin-bottom: -34px
+      font: 600 6rem/250% $firaSansCondensed
+      letter-spacing: 0.05em
+      white-space: nowrap
+      color: rgba(213, 213, 213, 0.2)
+  
+  &__list
+    padding-top: 100px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+  &__item
+    position: relative
+    padding-top: 10px
+    font: normal 1.5rem/2.5rem $firaSansCondensed
+    letter-spacing: 0.02em
+    color: $colorGrey
+    width: calc( 50% - 30px )
+
+    &::after
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      height: 2px
+      width: 105px
+      background-color: #1983dd
+
+  &__name
+    font: 400 2rem/2.5rem $firaSansCondensed

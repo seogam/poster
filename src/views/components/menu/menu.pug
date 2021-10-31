@@ -1,0 +1,7 @@
+mixin menu(classesMenu, listItemsMenu)
+  //- p=classesMenu
+  nav(class="menu " + classesMenu)
+    ul(class="menu__ul " + classesMenu + "__ul")
+      each item in listItemsMenu 
+        li(class="menu__item " + classesMenu + "__item")
+          a(href=item.url class="menu__link " + classesMenu + "__link")=item.name 

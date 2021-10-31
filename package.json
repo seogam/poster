@@ -1,0 +1,33 @@
+{
+  "name": "template-layout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.9",
+    "browser-sync": "^2.26.14",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-include": "^2.4.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.43.4"
+  },
+  "dependencies": {
+    "D": "^1.0.0",
+    "jquery": "^3.6.0",
+    "node-sass": "^6.0.1"
+  }
+}

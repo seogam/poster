@@ -1,0 +1,15 @@
+-
+  var partnersItem = [
+    {id: 0, src:'./assets/images/partner-logo-01.svg'},
+    {id: 1, src:'./assets/images/partner-logo-02.svg'},
+    {id: 2, src:'./assets/images/partner-logo-03.svg'}
+  ]
+
+mixin partners(blockTitle)
+  section(class="partners")
+    h2(class="partners__title")=blockTitle
+    if partnersItem
+      ul(class="partners__list")
+        each item in partnersItem
+          li(class="partners__item")
+            img(src=item.src, class="partners__image", alt="")
