@@ -1,0 +1,10 @@
+mixin question(title)
+  section(class="question")
+    div(class="question__inner")
+      div(class="question__left")
+        div(class="question__title")=title 
+        div(class="question__text")
+          | Задайте вопрос нашему специалисту, наш специалист свяжется с вами в течении одного дня
+      div(class="question__right")
+        +btn("#", "Murojaat qoldirish")(class="question__btn btn btn--telegram")
+

@@ -1,0 +1,42 @@
+.btn
+  align-self: flex-start
+  display: inline-block
+  padding: 15px
+  border-radius: 3px
+  border: 1px solid transparent
+  font: 400 1.8rem/2rem $firaSansCondensed
+  letter-spacing: 0.02em
+  text-transform: uppercase
+  transition: background-color 0.5s ease
+  
+  &--signup
+    margin-right: 15px
+    background-color: #4a90e2
+    color: $colorWhite
+
+    &:hover
+      background-color: #3375c3
+
+  &--video
+    color: $colorWhite
+    border-color: #fff
+    background-image: url('../images/icon-play.svg')
+    background-repeat: no-repeat
+    background-position: 10px 50%
+    background-size: 40px 40px
+    & 
+      img
+        fill: #fff
+
+  &--telegram
+    padding-left: 60px
+    color: $colorGrey
+    background-image: url('../images/icon-telegram.svg')
+    background-color: #fff
+    background-repeat: no-repeat
+    background-position: 10px 50%
+    background-size: 40px 40px
+    box-shadow: 0px 3px 5px 3px rgb(0 0 0 / 5%)
+
+    &:hover
+      background-color: #eee
