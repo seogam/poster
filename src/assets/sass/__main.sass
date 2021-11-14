@@ -6,6 +6,7 @@ html, body
 
 body
   font-family: $firaSansCondensed
+  background: #fff
 
 img
   display: block
@@ -23,14 +24,29 @@ ul
 
 .title
   margin: 0
-  font: 600 4rem/150.2% $firaSansCondensed
-  color: $colorGrey
+  font: 600 4rem/140.2% $firaSansCondensed
+  color: #525252
   letter-spacing: 0.02em
+  &--middle
+    margin: 0
+    font: 400 2.5rem/150.2% $firaSansCondensed
+    color: #6c6c6c
+    letter-spacing: 0.02em
+
+  &::first-letter
+    color: #4a90e2
 
 .text
   font: 300 1.8rem/150.2% $firaSansCondensed
   color: $colorGrey
   letter-spacing: 0.02em
+
+.block
+  position: relative
+  &__inner
+    max-width: 1360px
+    margin: 0 auto
+    padding: 0 15px
 
 .top-menu
   

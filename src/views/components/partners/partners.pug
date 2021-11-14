@@ -1,15 +1,19 @@
 -
   var partnersItem = [
-    {id: 0, src:'./assets/images/partner-logo-01.svg'},
-    {id: 1, src:'./assets/images/partner-logo-02.svg'},
-    {id: 2, src:'./assets/images/partner-logo-03.svg'}
+    {id: 1, src:'./assets/images/partner-01.svg'},
+    {id: 2, src:'./assets/images/partner-02.svg'},
+    {id: 3, src:'./assets/images/partner-03.svg'},
+    {id: 4, src:'./assets/images/partner-04.svg'},
+    {id: 5, src:'./assets/images/partner-05.svg'},
+    {id: 6, src:'./assets/images/partner-06.svg'},
   ]
 
 mixin partners(blockTitle)
-  section(class="partners")
-    h2(class="partners__title")=blockTitle
-    if partnersItem
-      ul(class="partners__list")
-        each item in partnersItem
-          li(class="partners__item")
-            img(src=item.src, class="partners__image", alt="")
+  section(class="block partners")
+    div(class="block__inner partners__inner")
+      h2(class="title partners__title")=blockTitle
+      if partnersItem
+        ul(class="partners__list")
+          each item in partnersItem
+            li(class="partners__item")
+              img(src=item.src, class="partners__image", alt="")

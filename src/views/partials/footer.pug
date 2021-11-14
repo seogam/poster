@@ -12,7 +12,7 @@ footer(class="footer")
     div(class="footer__logo")
       img(src="./assets/images/logo-footer.svg", alt="")
 
-    +menu('footer-menu', footerItemsMenu)
+    //- +menu('footer-menu', footerItemsMenu)
 
     //- nav
     //-   ul(class="footer__menu menu")
@@ -21,5 +21,5 @@ footer(class="footer")
     //-         a(class="menu__link" href=item.url)=item.name
     
     div(class="contacts")
-      +phone('+998 91 585 85 95', true)
-      +address('Tashkent, T. Shevchenko st, 21A', 'footer')
+      +phone('+998 91 585 85 95', false)
+      +address("Tashkent, 16 Afrosiyob ko'chasi 100015", 'footer')

@@ -1,17 +1,53 @@
 @import '../../../assets/sass/__variables.sass'
 .partners
-  max-width: 1200px
-  margin: 0 auto
-  padding-bottom: 126px
+  padding: 100px 0
+
   &__title
-    font: normal 4.5rem/150.2% $firaSansCondensed
-    font-weight: 800
     text-align: center
-    letter-spacing: 0.05em
-    color: $colorGrey
+
   &__list
+    position: relative
+
+
+  .slick-arrow
+    position: absolute
+    top: 50%
+    margin-top: -20px
+    font-size: 0
+    width: 40px
+    height: 40px
+    border: none
+    border-radius: 50%
+    cursor: pointer
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: 25px 25px
+    background-color: #eee
+    z-index: 1
+
+  .slick-prev
+    left: 0
+    background-image: url('../images/left-arrow.svg')
+
+  .slick-next
+    right: 0
+    background-image: url('../images/right-arrow.svg')
+
+  .slick-dots
     display: flex
-    justify-content: space-between
-    align-items: center
-  &__item
-    width: calc(33% - 100px)
+    justify-content: center
+    li
+      margin: 0 5px
+    button
+      width: 15px
+      height: 15px
+      background: #eee
+      border-radius: 50%
+      border: none
+      font-size: 0
+      line-height: 0
+      cursor: pointer
+
+    .slick-active
+      button
+        background: #4a90e2
