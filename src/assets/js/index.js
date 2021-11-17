@@ -5,6 +5,7 @@
 
 $(() => {
   //=require main.js
+  //=require ../../views/components/program/program.js
   $('.partners__list').slick({
     infinite: true,
     slidesToShow: 5,

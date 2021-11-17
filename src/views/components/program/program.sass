@@ -1,0 +1,92 @@
+.program
+  padding: 50px 0
+
+  &__title
+    margin-bottom: 20px
+    text-align: center
+  
+  &__body
+    padding: 0
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+
+  &__item
+    position: relative
+    width: calc(50% - 15px)
+    display: flex
+    align-items: center
+    padding: 15px 0
+    margin-bottom: 25px
+    border-bottom: 1px solid rgba(0,0,0,0.09)
+    transition: border linear .2s
+  
+  &__item-inner
+    display: inline-flex
+
+  &__description
+    width: 80%
+    padding: 0 15px
+
+  &__icon
+    max-width: 500px
+    width: 500px
+    height: 280px
+    overflow: hidden
+
+  &__name
+    margin: 1.2rem 0
+    font: 400 2rem/2.2rem $firaSansCondensed
+    color: $colorGrey
+    letter-spacing: 0.02em
+
+  &__text
+    font: 300 1.7rem/2.2rem $firaSansCondensed
+    color: $colorGrey
+    letter-spacing: 0.02em
+
+  .slick-arrow
+    position: absolute
+    top: 50%
+    margin-top: -20px
+    font-size: 0
+    width: 40px
+    height: 40px
+    border: none
+    border-radius: 50%
+    cursor: pointer
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: 25px 25px
+    background-color: #eee
+    z-index: 1
+
+  .slick-prev
+    left: 0
+    background-image: url('../images/left-arrow.svg')
+
+  .slick-next
+    right: 0
+    background-image: url('../images/right-arrow.svg')
+
+  .slick-dots
+    margin-top: 25px
+    width: 100%
+    display: flex
+    justify-content: center
+    li
+      margin: 0 5px
+    button
+      width: 15px
+      height: 15px
+      background: #eee
+      border-radius: 50%
+      border: none
+      font-size: 0
+      line-height: 0
+      cursor: pointer
+
+    .slick-active
+      button
+        background: #4a90e2
