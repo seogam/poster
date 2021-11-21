@@ -1,9 +1,11 @@
 -
   var aboutList = [
-    {id: 1, name: 'Уменьшайте время приема заказа', image: './assets/images/statistic2.svg', text: 'Официант принимает заказ на планшете прямо у столика или на баре и мгновенно пересылает его на кухню.'},
-    {id: 2, name: 'Не переживайте, если нет интернета',  image: './assets/images/billing.svg', text: 'Все данные о продажах сохраняются и синхронизируются как только появится соединение — работа в заведении не останавливается.'},
-    {id: 3, name: 'Проводите детальный складской учет', image: './assets/images/monitoring.svg', text: 'Помимо контроля поставок и списаний, вы сможете импортировать / экспортировать накладные и настраивать напоминания о закупках.'},
-    {id: 4, name: 'Принимайте любые оплаты', image: './assets/images/profile2.svg', text: 'Наличные, банковская карта, частичная оплата бонусами или разделение чека — не вопрос!'},
+    {id: 1, name: "Buyurtmani qabul qilish vaqtini qisqartiring",  image: './assets/images/statistic2.svg', text: "Ofitsiant planshetdagi buyurtmani stolda yoki barda qabul qiladi va darhol uni oshxonaga yo'naltiradi."},
+    {id: 2, name: "Internet yo'q bo'lsa, tashvishlanmang",  image: './assets/images/billing.svg', text: "Barcha savdo ma'lumotlari saqlanadi, va Internetga ulanish paydo bo'lishi bilan sinxronlashtiriladi - muassasada ishlash to'xtamaydi."},
+    
+    {id: 3, name: "To'liq inventarizatsiya nazoratini o'tkazing", image: './assets/images/monitoring.svg', text: "Yetkazib berish hisobini chiqarishni nazorat qilish bilan bir qatorda siz hisob-fakturalarni import / eksport qilishingiz va sotib olish to'g'risida eslatmalarni o'rnatishingiz mumkin."},
+
+    {id: 4, name: "Turlik turdagi to'lovlarni qabul qiling", image: './assets/images/profile2.svg', text: "Naqd pul, bank kartasi, bonuslar bilan qisman to'lov yoki cheklarni bo'linib tilovi - hech qanday muammo yo'q! "},
   ]
 
 mixin about(title)
@@ -24,7 +26,7 @@ mixin about(title)
           img(src="./assets/images/devices-ru-rub.png", alt="")
 
     div(class="about__content" id="about-content")
-      h2(class="block__inner title about__title about__title-list") Управляйте своим кафе вместе с Poster
+      h2(class="block__inner title about__title about__title-list") Kafeingizni Poster bilan boshqaring
       ul(class="block__inner about__list")
         each item in aboutList
           li(class="about__item")
