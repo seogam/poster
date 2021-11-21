@@ -1,10 +1,9 @@
 -
-  var cloudSystems = [
-    {id: 1, name: 'Детальные отчеты', image: './assets/images/statistics-ru-rub.png', text: 'Программа учета для кафе Poster хранит данные в облаке и синхронизирует их в режиме реального времени. Вы можете проверять: оборот стола, средний чек, продажи и производительность по каждому сотруднику, самые популярные блюда, наиболее загруженные дни недели или часы, просто открыв админ-панель в браузере ноутбука.'},
-    {id: 2, name: 'Инвентаризация', image: './assets/images/inventory-ru-rub.png', text: 'В Poster можно провести как полную, так и частичную инвентаризацию склада. Если вы хотите проверить остатки определенного продукта, просто перейдите на вкладку проверки запасов в админ-панели.'},
-    {id: 3, name: 'Заработная плата персонала кафе', image: './assets/images/payroll-ru-rub.png', text: 'Следите за рабочим временем ваших сотрудников и рассчитывайте заработную плату в Poster. Просматривая затраты на персонал и сравнивая их с отчетами о продажах, вы сможете лучше анализировать денежные потоки внутри заведения и оптимизировать расходы вашего кафе.'},
-    {id: 4, name: 'Приложение Poster Boss на смартфоне', image: './assets/images/iphone-ru-rub.png',  text: 'Дополнительное программное обеспечение для кафе, чтобы проверять отчеты о продажах и складских остатках прямо из приложения для смартфона. Можно также настроить уведомления о текущих транзакциях и изменениях в кассе вашего кафе.'},
-    
+  var programList = [
+    {id: 1, name: 'Batafsil hisobotlar', image: './assets/images/statistics-ru-rub.png', text: 'Poster kafe buxgalteriya dasturi bulutda ma\'lumotlarni saqlaydi va ularni real vaqtda sinxronizatsiya qiladi. Siz quyidagilarni tekshirishingiz mumkin: stol aylanmasi, o\'rtacha to\'lov, har bir xodim uchun sotish va ishlash ko\'rsatkichlari, eng mashhur ovqatlar, haftaning eng qizg\'in kunlari yoki soatlari, shunchaki noutbuk brauzerida administrator panelini ochish orqali.'},
+    {id: 2, name: 'Inventarizatsiya', image: './assets/images/inventory-ru-rub.png', text: 'Posterda siz omborni to\'liq va qisman inventarizatsiyadan o\'tkazishingiz mumkin. Agar ma\'lum bir mahsulot zaxirasini tekshirmoqchi bo\'lsangiz, administrator panelidagi zaxiralarni tekshirish yorlig\'iga o\'ting.'},
+    {id: 3, name: 'Smartfonda Poster Boss dasturi', image: './assets/images/iphone-ru-rub.png',  text: '      Sotuvlar va inventarizatsiya hisobotlarini to\'g\'ridan-to\'g\'ri smartfon ilovangizdan tekshirish uchun ixtiyoriy kafe dasturi. Siz shuningdek, davom etayotgan tranzaktsiyalar va kafe kassasida o\'zgarishlar haqida xabarlarni o\'rnatishingiz mumkin. '},
+    {id: 4, name: 'Kafe xodimlarining ish haqi', image: './assets/images/payroll-ru-rub.png', text: "Xodimlaringizning ish vaqtini kuzatib boring va \"Poster\" da ish haqini hisoblang. Xodimlar xarajatlarini ko'rib chiqish va ularni savdo hisobotlari bilan taqqoslash orqali siz korxona ichidagi pul oqimlarini yaxshiroq tahlil qilishingiz va kafe xarajatlarini optimallashtirishingiz mumkin."},
   ]
 
 mixin program(title)
@@ -15,14 +14,14 @@ mixin program(title)
         block 
       
       ul(class="program__list")
-        each item in cloudSystems 
+        each item in programList 
           li(class="program__item")
-            div(class="program__item-inner")
-              div(class="program__icon")
-                img(src=item.image, alt="")
-              div(class="program__description")
-                h4(class="program__name")=item.name
-                div(class="program__text")
-                  p=item.text
-            
+            h4(class="program__name")=item.name
+
+            div(class="program__icon")
+              img(src=item.image, alt="")
+              
+            div(class="text program__text")
+              p=item.text
+        
             

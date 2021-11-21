@@ -4,23 +4,34 @@
 
   &__inner
     display: flex
-    justify-content: space-between
+    flex-wrap: wrap
+    
+    @media (min-width: 768px)
+      &
+        justify-content: space-between
+
+    @media (max-width: 767px)
+      &
+        justify-content: center
 
   &__left, &__right
-    width: 50%
+    @media (min-width: 768px)
+      &
+        width: 50%
   
   &__right
     display: flex
-    justify-content: end
+    justify-content: flex-end
     align-self: center
 
   &__title
     margin-bottom: 20px
-    font: 500 3.5rem/2.5rem $firaSansCondensed
+    font: 500 3rem/4rem $firaSansCondensed
     color: $colorGrey
     letter-spacing: 0.02em
 
   &__text
-    font: 300 2rem/2.5rem $firaSansCondensed
-    color: $colorGrey
-    letter-spacing: 0.02em
+    max-width: 480px
+    //font: 300 2rem/2.5rem $firaSansCondensed
+    //color: $colorGrey
+    //letter-spacing: 0.02em

@@ -1,32 +1,36 @@
 -
   var cloudSystems = [
-    {id: 1, name: 'Анализируйте статистику продаж', image: './assets/images/statistic.svg', text: 'Когда и что продается лучше, в какое время больше гостей и где больше всего списаний. Все данные доступны в любое время, нужно лишь открыть админ-панель Poster в браузере ноутбука.'},
-    {id: 2, name: 'Контролируйте расходы и фудкост',  image: './assets/images/wallet.svg', text: 'Программа для кафе все считает за вас. Вам остается только просматривать как изменяются ваши расходы с каждой новой поставкой, корректировать рецепты и цены, чтобы ваше меню оставалось выгодным.'},
-    {id: 3, name: 'Получайте максимум эффективности', image: './assets/images/presentation.svg',  text: 'Автоматизация кафе на планшете — это мобильные официанты и стабильная работа кухни во время загрузки в час-пик.'},
-    {id: 4, name: 'Быстро обучайте персонал',  image: './assets/images/profile.svg', text: 'Ваш новый официант сможет принять свой первый заказ, назначить ему на стол и провести оплату уже через несколько минут обучения.'},
+    {id: 1, name: 'Savdo statistikasini  tahlil qiling', image: './assets/images/statistic2.svg', text: "Qachon va nima eng yaxshi sotiladi, qachon ko'proq mehmonlar bo'ladi va qaerda eng ko'p hisobdan chiqariladi. Barcha ma'lumotlar istalgan vaqtda mavjud, faqat noutbuk brauzerida Poster admin panelini ochishingiz kerak."},
+
+    {id: 2, name: 'Xarajatlar va oziq-ovqat narxini  nazorat qiling', image: './assets/images/billing.svg', text: " Kafe dasturi siz uchun hamma narsani qiladi. Siz har bir yangi etkazi ber ishda sizning xarajatlaringiz qanday o'zgarishini ko'rishingiz, retseptlar va  narxlarni sozlashingiz kerak, shunda menyuingiz foydali bo'lib  qoladi."},
+
+    {id: 3, name: 'O\'zingizning samaradorligingizdan maksimal darajada foydalaning', image: './assets/images/monitoring.svg',  text: 'Planshetdagi kafe avtomatizatsiyasi bu - mobil ofitsiantlar va shoshilinch yuklash paytida barqaror oshxona ishini anglatadi.'},
+
+    {id: 4, name: 'Xodimlarni tezda o\'rgating', image: './assets/images/profile2.svg', text: "Sizning yangi ofitsiantingiz birinchi buyurtmani qabul qilib, stolga tayinlashi va bir necha daqiqali mashg'ulotlar davomida pul to'lashi mumkin."},
   ]
 
 mixin cloud-system(title)
-  section(class="cloud-system")
-    div(class="cloud-system__inner")
-      div(class="cloud-system__container")
-        div(class="cloud-system__left")
-          h2(class="cloud-system__title title")=title 
-          div(class="cloud-system__body text") 
-            block 
+  section(class="block cloud-system" id="cloud-system")
+   
+    div(class="block__inner cloud-system__container")
+      div(class="cloud-system__left")
+        h2(class="cloud-system__title title")=title 
+        div(class="cloud-system__body text") 
+          block 
 
-        div(class="cloud-system__right")
-          img(src="./assets/images/manage.png", alt="")
-      
-      h2(class="cloud-system__title title--middle") Облачная система автоматизации кафе, которая помогает вам быть более продуктивным:
-      
-      ul(class="cloud-system__list")
+      div(class="cloud-system__right")
+        img(src="./assets/images/manage.png", alt="")
+    
+    div(class="cloud-system__inner")
+      h2(class="block__inner cloud-system__title--middle title--middle") Menejerlar uchun barcha ma'lumotlarni o'z ichiga olgan kafe:
+      ul(class="block__inner cloud-system__list")
         each item in cloudSystems 
           li(class="cloud-system__item")
+            div(class="cloud-system__icon")
+              img(src=item.image, alt=item.name)
             div(class="cloud-system__description")
               h4(class="cloud-system__name")=item.name
-              div(class="cloud-system__text")
+              div(class="text cloud-system__text")
                 p=item.text
-            div(class="cloud-system__icon")
-              img(src=item.image, width="100px", alt="")
+            
             

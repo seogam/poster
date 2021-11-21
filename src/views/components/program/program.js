@@ -25,3 +25,25 @@
 //     }
 //   ]
 // });
+
+$(window).on('load resize orientationchange', function() {
+  $('.program__list').each(function(){
+      var $carousel = $(this);
+      /* Initializes a slick carousel only on mobile screens */
+      // slick on mobile
+      if ($(window).width() > 1024) {
+          if ($carousel.hasClass('slick-initialized')) {
+              $carousel.slick('unslick');
+          }
+      }
+      else{
+          if (!$carousel.hasClass('slick-initialized')) {
+              $carousel.slick({
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  mobileFirst: true,
+              });
+          }
+      }
+  });
+});

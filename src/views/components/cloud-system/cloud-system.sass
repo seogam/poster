@@ -1,22 +1,58 @@
 .cloud-system
-  padding: 50px 0 100px
+  padding: 50px 0 0
 
   &__inner
-    max-width: 1360px
-    margin: 0 auto
+    position: relative
+    //max-width: 1360px
+    //margin: 0 auto
+    padding: 50px 0
+    background: #eee url('../images/about-bg.jpg') no-repeat 50% 50%/cover
+
+    &:before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background-color: rgba(0,0,0,0.8)
 
   &__container
     display: flex
     padding-bottom: 50px
+    @media (max-width: 767px)
+      &
+        flex-wrap: wrap
 
   &__title
     margin-bottom: 20px
-
-  &__left, &__right
-    width: 50%
+    &--middle
+      position: relative
+      color: $colorWhite
 
   &__left
+    padding-top: 30px
     flex-basis: fit-content
+    @media (min-width: 768px)
+      &
+        width: 40%
+
+    @media (max-width: 767px)
+      &
+        width: 100%
+
+  &__right
+    img
+      max-width: 500px
+      
+    @media (min-width: 768px)
+      &
+        width: 60%
+
+    @media (max-width: 767px)
+      &
+        width: 100%
+
   
   &__body
     padding: 0
@@ -27,35 +63,40 @@
 
   &__item
     position: relative
-    width: calc(50% - 15px)
     display: flex
     align-items: center
     padding: 15px 0
-    margin-bottom: 25px
-    border-bottom: 1px solid rgba(0,0,0,0.09)
+    margin-bottom: 15px
+    border-bottom: 1px solid rgba(255,255,255, .2)
     transition: border linear .2s
 
-    &:not(:nth-child(even))
-      margin-right: 30px
+    @media (min-width: 768px)
+      &
+        width: calc(50% - 15px)
+      &:not(:nth-child(even))
+        margin-right: 30px
+
+    @media (max-width: 767px)
+      &
+        width: calc(100%)
 
     &:hover
-      border-color: #4a90e2
+      border-color: $colorWhite
+
   &__description
-    padding-right: 15px
+    padding-left: 15px
 
   &__icon
+    padding-top: 3rem
     img
-      max-width: 75px
-      width: 75px
+      max-width: 60px
+      width: 60px
 
   &__name
     margin: 1.2rem 0
     font: 400 2rem/2.2rem $firaSansCondensed
-    color: $colorGrey
+    color: $colorWhite
     letter-spacing: 0.02em
 
   &__text
-    font: 300 1.7rem/2.2rem $firaSansCondensed
-    color: $colorGrey
-    letter-spacing: 0.02em
-
+    color: $colorWhite

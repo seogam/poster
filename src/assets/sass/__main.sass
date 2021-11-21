@@ -22,11 +22,20 @@ ul
   padding: 0
   margin: 0
 
+.wrapper
+  position: relative
+
 .title
   margin: 0
-  font: 600 4rem/140.2% $firaSansCondensed
   color: #525252
   letter-spacing: 0.02em
+
+  @media (min-width: 1025px)
+    font: 500 3.5rem/130% $firaSansCondensed
+    
+  @media (max-width: 1024px)
+    font: 500 3rem/120% $firaSansCondensed
+
   &--middle
     margin: 0
     font: 400 2.5rem/150.2% $firaSansCondensed
@@ -37,9 +46,13 @@ ul
     color: #4a90e2
 
 .text
-  font: 300 1.8rem/150.2% $firaSansCondensed
   color: $colorGrey
   letter-spacing: 0.02em
+
+  @media (min-width: 1025px)
+    font: 300 1.7rem/150.2% $firaSansCondensed
+  @media (max-width: 1024px)
+    font: 300 1.6rem/140.2% $firaSansCondensed
 
 .block
   position: relative
@@ -67,15 +80,37 @@ ul
     margin: -15px 0
     padding: 15px
 
+.telegramim_button
+  position: fixed
+  bottom: 25px
+  right: 25px
+  z-index: 10
+
 .footer
-  background-color: #F9F9F9
-  color: $colorGrey
+  background-color: #232a34
+  color: $colorWhite
 
   &__inner
-    min-height: 222px
     display: flex
+    flex-wrap: wrap
     justify-content: space-between
-    align-items: center
-    max-width: 1200px
-    margin: 0 auto
+    align-items: flex-start
+    padding-top: 50px
+    padding-bottom: 50px
 
+
+        
+
+  &__logo
+    @media (min-width: 769px)
+      &
+        max-width: 200px
+    @media (max-width: 768px)
+      &
+        max-width: 140px
+        margin-bottom: 15px
+
+  &__text
+    padding-top: 15px
+    font: 300 1.2rem/150% $firaSansCondensed
+    letter-spacing: 0.03em

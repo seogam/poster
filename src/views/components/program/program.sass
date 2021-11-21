@@ -1,11 +1,12 @@
 .program
   padding: 50px 0
+  background-color: #f7f7f7
 
   &__title
     margin-bottom: 20px
-    text-align: center
   
   &__body
+    max-width: 700px
     padding: 0
 
   &__list
@@ -14,26 +15,34 @@
 
   &__item
     position: relative
-    width: calc(50% - 15px)
+    padding: 15px
+    margin-bottom: 15px
     display: flex
     align-items: center
-    padding: 15px 0
-    margin-bottom: 25px
-    border-bottom: 1px solid rgba(0,0,0,0.09)
-    transition: border linear .2s
+    flex-direction: column
+    justify-content: start
+    border: 1px solid rgba(0,0,0,0.09)
+    border-radius: 3px
+    background-color: #fff
+    transition: all 0.5s ease
+
+    @media (min-width: 1025px)
+      width: calc(50% - 40px)
+
+      &:not(:nth-child(even))
+        margin-right: 15px
   
-  &__item-inner
-    display: inline-flex
-
-  &__description
-    width: 80%
-    padding: 0 15px
-
   &__icon
-    max-width: 500px
-    width: 500px
-    height: 280px
+    display: inline-block
+    margin-top: 15px
+    height: 350px
+    background-color: #fff
+    border-radius: 6px
+    box-shadow: 0 10px 20px 0 rgb(0 0 0 / 9%)
     overflow: hidden
+    img
+      max-width: 500px
+      width: 100%
 
   &__name
     margin: 1.2rem 0
@@ -42,9 +51,9 @@
     letter-spacing: 0.02em
 
   &__text
-    font: 300 1.7rem/2.2rem $firaSansCondensed
-    color: $colorGrey
-    letter-spacing: 0.02em
+    padding-top: 15px
+
+    
 
   .slick-arrow
     position: absolute

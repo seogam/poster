@@ -3,8 +3,8 @@ mixin question(title)
     div(class="block__inner question__inner")
       div(class="question__left")
         div(class="question__title")=title 
-        div(class="question__text")
-          | Задайте вопрос нашему специалисту, наш специалист свяжется с вами в течении одного дня
+        div(class="text question__text")
+          block
       div(class="question__right")
         +btn("#", "Murojaat qoldirish")(class="question__btn btn btn--telegram")
 

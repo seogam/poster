@@ -1,52 +1,37 @@
 @import '../../../assets/sass/__variables'
 .about
-  padding-bottom: 50px
+  margin-top: 70px
+  padding: 0 0 50px
 
   &__inner
-    padding: 50px 0 80px
     position: relative
 
   &__container
     display: flex
     justify-content: space-between
+    @media (max-width: 1024px)
+      &
+        flex-wrap: wrap
 
   &__image, &__body
-    width: 50%
+    @media (min-width: 1025px)
+      &
+        width: 50%
 
-  &__image
-    padding-top: 30px
+    @media (max-width: 1024px)
+      &
+        width: 100%
     
   &__body
-    padding-top: 15px
     padding-right: 30px
 
   &__content
     position: relative
-    padding: 100px 0 83px
-    background: #eee url('../images/about-bg.jpg') no-repeat 50% 50%/100%
+    margin-top: 70px
 
-    &:before
-      content: ""
-      position: absolute
-      top: 0
-      left: 0
-      right: 0
-      bottom: 0
-      background-color: rgba(0,0,0,0.8)
-
-  &__title
-    text-align: center
-
-    &--big
-      margin-bottom: -34px
-      font: 600 5.5rem/220% $firaSansCondensed
-      letter-spacing: 0.05em
-      white-space: nowrap
-      color: rgba(213, 213, 213, 0.2)
-  
   &__title-list
     position: relative
-    color: #fff
+    color: $colorGrey
     margin-bottom: 1.5rem
     z-index: 1
 
@@ -65,21 +50,36 @@
     padding: 15px
     margin-right: 15px
     margin-bottom: 15px
-    width: calc( 50% - 45px )
-    color: #fff
-    box-shadow: 0 1px 0 0 rgba(0,0,0,0.1)
+    color: $colorGrey
+    border-bottom: 1px solid rgba(0,0,0,0.09)
+    transition: border linear .2s
     
-    &:not(:nth-child(2n))
-      margin-right: 0
+    @media (min-width: 768px)
+      &
+        width: calc( 50% - 45px )
+      &:not(:nth-child(2n))
+        margin-right: 0
 
+    @media (max-width: 767px)
+      &
+        width: calc(100%)
+
+    &:hover
+      border-color: #4a90e2
+
+  &__description
+    padding-left: 15px
+    
   &__name
     position: relative
-    font: 500 2rem/2.5rem $Montserrat
+    font: 400 2rem/2.2rem $firaSansCondensed
     margin: 0
 
   &__icon
-    margin-right: 15px
-    text-align: center
+    padding-top: 3rem
+    img
+      max-width: 60px
+      width: 60px
   
   &__icon-image
     width: 100px

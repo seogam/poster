@@ -7,11 +7,11 @@
     {id: 4, name: 'Contact us', url: '#contact-us'}
   ]
 
-footer(class="footer")
-  div(class="footer__inner") 
+footer(class="block footer")
+  div(class="block__inner footer__inner") 
     div(class="footer__logo")
-      img(src="./assets/images/logo-footer.svg", alt="")
-
+      img(src="./assets/images/logo-w.png", alt="Poster - Kafe avtomatizatsiyasi")
+      div(class="footer__text") Kafe uchun onlayn to'lov: Android planshet yoki iPad uchun dastur va oyiga atigi 19 dollar.
     //- +menu('footer-menu', footerItemsMenu)
 
     //- nav
@@ -20,6 +20,6 @@ footer(class="footer")
     //-       li(class="menu__item")
     //-         a(class="menu__link" href=item.url)=item.name
     
-    div(class="contacts")
-      +phone('+998 91 585 85 95', false)
-      +address("Tashkent, 16 Afrosiyob ko'chasi 100015", 'footer')
+    +work-time("Ish tartibi:")
+    +phone('footer')
+    +address("16 Afrosiyob ko'chasi, Tashkent 100015", 'footer')

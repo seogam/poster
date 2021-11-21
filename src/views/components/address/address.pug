@@ -1,2 +1,4 @@
 mixin address(addressText, addressClass)
-  address(class="address address--" + addressClass)=addressText
+  address(class="address address--" + addressClass)
+    div(class="address__title address__title--" + addressClass) Manzil:
+    div(class="address__text address__text--" + addressClass)=addressText

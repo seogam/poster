@@ -1,6 +1,10 @@
 .logo
-  max-width: 130px
-  display: flex
+  @media (min-width: 1025px)
+    &
+      max-width: 200px
+  @media (max-width: 1024px)
+    &
+      max-width: 150px
 
   &__image
     align-self: center

@@ -1,4 +1,8 @@
-mixin btn(href, title, className)
-  a(href=href, class!=attributes.class)
-    span=title
+mixin btn(href, title, fancybox)
+  if fancybox
+    a(href=href, class!=attributes.class data-fancybox)
+      span=title
+  else 
+    a(href=href, class!=attributes.class)
+      span=title
   

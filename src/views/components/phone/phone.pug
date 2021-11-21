@@ -1,5 +1,14 @@
-mixin phone(phoneNumber, phoneIcon, phoneClass)
-  div(class="phone phone--" + phoneClass)
-    if phoneIcon
-      img(src="./assets/images/icon-phone.svg", class="phone__icon" alt="")
-    a(href="tel:" + phoneNumber, class="phone__text phone__text--" + phoneClass)=phoneNumber
+-
+  var phones = [
+    {id: 1, phone: '+(99890) 008 01 13',},
+    {id: 2, phone: '+(99890) 008 01 14',},
+    {id: 3, phone: '+(99890) 008 01 15',},
+  ]
+
+mixin phone(phoneClass)
+  div(class="phone")
+    div(class="phone__title") Telefon raqamlar:
+    ul(class="phone__list phone--" + phoneClass)
+      each item in phones 
+        li(class="phone__item phone__item--" + phoneClass + "")
+          a(href="tel:" + item.phone, class="phone__text phone__text--" + phoneClass)=item.phone

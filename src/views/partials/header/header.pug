@@ -1,35 +1,32 @@
 -
   var topMenuLi = [
-    {id: 0, name: 'Особенности', url: '#top'},
-    {id: 1, name: 'Преимущества', url: '#about'},
-    {id: 2, name: 'Services', url: '#services'},
+    {id: 0, name: 'Poster haqida', url: '#about'},
+    {id: 1, name: 'Преимущества', url: '#about-content'},
+    {id: 2, name: 'Cloud-system', url: '#cloud-system'},
     {id: 3, name: 'Resources', url: '#resources'},
     {id: 4, name: 'Contact us', url: '#contact-us'},
   ]
 
 header(class="header")
-  
   div(class="header__top")
     div(class="header__container")
-      +logo('./assets/images/logo.png')
-      +menu('top-menu', topMenuLi)
-      div(class="contacts")
-        +phone('+(99890) 008 01 13', false, 'header')
-        +phone('+(99890) 008 01 14', false, 'header')
-        +phone('+(99890) 008 01 15', false, 'header')
-        +address('Узбекистан, Ташкент, ул. Афрасиаб 16', 'header')
-      //- +lang(['EN', 'RU'])
+      div(class="menu__burger")
+      +logo('./assets/images/logo-w.png')
+      //- +menu('menu-header', topMenuLi)
+      +work-time("Ish tartibi:")
+      +address("Tashkent, 16 Afrosiyob ko'chasi 100015", 'header')
+      +phone('header')
 
   div(class="header__inner")
-    div(class="header__description")
+    div(class="block__inner header__description")
       h1(class="header__title block__title") 
         | Kafe avtomatizatsiyasi
       div(class="header__text")
         p Kafe uchun onlayn to'lov: Android planshet yoki iPad uchun dastur va oyiga atigi 19 dollar.
 
       div(class="header__btns")
-        +btn("https://joinposter.com/signup", "Bepul sinab korish")(class="btn btn--signup")
-        +btn("#", "Video ko'rish")(class="btn btn--video")
+        +btn("https://joinposter.com/signup", "Bepul sinab korish", false)(class="btn btn--signup")
+        +btn("https://www.youtube.com/watch?v=yV2180lUlaA", "Video ko'rish", true)(class="btn btn--video")
           svg#Capa_1(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 60 60' style='enable-background:new 0 0 60 60;' xml:space='preserve')
             g
               path(fill='#fff' d='M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30\
@@ -41,3 +38,7 @@ header(class="header")
     div(class="header__video")
       video(autoplay='' loop='' muted='' poster='https://www.pexels.com/assets/videos/free-videos-7daa2ef41a140f70c757ce91913a4ecb90570b7d7cd2b401bae868350e02c83a.jpg')
         source(src='./assets/videos/video.mp4' type='video/mp4')
+    
+    a(class="header__arrows" href="#about")
+      span
+      span

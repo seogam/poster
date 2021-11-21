@@ -1,13 +1,13 @@
 -
   var aboutList = [
-    {id: 1, name: 'Уменьшайте время приема заказа', text: 'Официант принимает заказ на планшете прямо у столика или на баре и мгновенно пересылает его на кухню.', image: './assets/images/time.svg'},
-    {id: 2, name: 'Не переживайте, если нет интернета',  image: './assets/images/wifi.svg', text: 'Все данные о продажах сохраняются и синхронизируются как только появится соединение — работа в заведении не останавливается.'},
-    {id: 3, name: 'Проводите детальный складской учет', image: './assets/images/list.svg', text: 'Помимо контроля поставок и списаний, вы сможете импортировать / экспортировать накладные и настраивать напоминания о закупках.'},
-    {id: 4, name: 'Принимайте любые оплаты', image: './assets/images/terminal.svg', text: 'Наличные, банковская карта, частичная оплата бонусами или разделение чека — не вопрос!'},
+    {id: 1, name: 'Уменьшайте время приема заказа', image: './assets/images/statistic2.svg', text: 'Официант принимает заказ на планшете прямо у столика или на баре и мгновенно пересылает его на кухню.'},
+    {id: 2, name: 'Не переживайте, если нет интернета',  image: './assets/images/billing.svg', text: 'Все данные о продажах сохраняются и синхронизируются как только появится соединение — работа в заведении не останавливается.'},
+    {id: 3, name: 'Проводите детальный складской учет', image: './assets/images/monitoring.svg', text: 'Помимо контроля поставок и списаний, вы сможете импортировать / экспортировать накладные и настраивать напоминания о закупках.'},
+    {id: 4, name: 'Принимайте любые оплаты', image: './assets/images/profile2.svg', text: 'Наличные, банковская карта, частичная оплата бонусами или разделение чека — не вопрос!'},
   ]
 
 mixin about(title)
-  section(class="block about")
+  section(class="block about" id="about")
     div(class="block__inner about__inner")
       //- div(class="about__title about__title--big title") Что такое Poster?
       h2(class="about__title title")=title
@@ -23,8 +23,8 @@ mixin about(title)
         div(class="about__image")
           img(src="./assets/images/devices-ru-rub.png", alt="")
 
-    div(class="about__content")
-      h2(class="title about__title about__title-list") Управляйте своим кафе вместе с Poster
+    div(class="about__content" id="about-content")
+      h2(class="block__inner title about__title about__title-list") Управляйте своим кафе вместе с Poster
       ul(class="block__inner about__list")
         each item in aboutList
           li(class="about__item")
