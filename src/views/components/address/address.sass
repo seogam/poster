@@ -1,19 +1,35 @@
 @import '../../../assets/sass/__variables'
 .address
   position: relative
+  color: $colorWhite
+
+  @media (max-width: 768px)
+    &
+      padding-top: 15px
 
   &__title
     padding-bottom: 10px
-    font: 300 1.4rem/2rem $firaSansCondensed
-    color: $colorWhite
+    @media (min-width: 769px)
+      &
+        font: 300 1.4rem/2rem $firaSansCondensed
+    @media (max-width: 768px)
+      &
+        font: 300 1.3rem/2rem $firaSansCondensed
 
   &__text
-    font: 400 1.6rem/160.7% $firaSansCondensed
     letter-spacing: 0.03em
-    color: $colorWhite
 
-  &--header
-    max-width: 200px
+    @media (min-width: 769px)
+      &
+        font: 400 1.6rem/160.7% $firaSansCondensed
+    @media (max-width: 768px)
+      &
+        font: 400 1.5rem/160.7% $firaSansCondensed
 
-  &--footer
-    max-width: 200px
+  &--header, &--footer
+    @media (min-width: 769px)
+      &
+        max-width: 200px
+    @media (max-width: 768px)
+      &
+        max-width: 150px

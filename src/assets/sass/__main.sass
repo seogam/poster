@@ -8,6 +8,13 @@ body
   font-family: $firaSansCondensed
   background: #fff
 
+  &.open-menu 
+    .overflow
+      display: block
+
+    .header__container
+      left: 0
+
 img
   display: block
   width: 100%
@@ -98,9 +105,6 @@ ul
     padding-top: 50px
     padding-bottom: 50px
 
-
-        
-
   &__logo
     @media (min-width: 769px)
       &
@@ -114,3 +118,13 @@ ul
     padding-top: 15px
     font: 300 1.2rem/150% $firaSansCondensed
     letter-spacing: 0.03em
+
+.overflow
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background-color: rgba(0, 0, 0, 0.6)
+  display: none
+  z-index: 1

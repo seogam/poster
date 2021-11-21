@@ -1,7 +1,6 @@
-mixin work-time(title)
-  div(class="work-time")
-    div(class="work-time")
-      div(class="work-time__title")=title
-      ul(class="work-time__list")
-        li(class="work-time__item") 10:00 dan 18:30 gacha
-        li(class="work-time__item") Sha-Yak - dam olish kunlari
+mixin work-time(title, classes)
+  div(class="work-time work-time--" + classes)
+    div(class="work-time__title work-time__title--" + classes)=title
+    ul(class="work-time__list work-time__list--" + classes)
+      li(class="work-time__item work-time__item--" + classes) 10:00 dan 18:30 gacha
+      li(class="work-time__item work-time__item--" + classes) Sha-Yak - dam olish kunlari

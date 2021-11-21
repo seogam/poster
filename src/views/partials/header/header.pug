@@ -9,14 +9,15 @@
 
 header(class="header")
   div(class="header__top")
+    div(class="menu__burger")
     div(class="header__container")
-      div(class="menu__burger")
+      
       +logo('./assets/images/logo-w.png')
       //- +menu('menu-header', topMenuLi)
-      +work-time("Ish tartibi:")
+      +work-time("Ish tartibi:", 'header')
       +address("Tashkent, 16 Afrosiyob ko'chasi 100015", 'header')
       +phone('header')
-
+    
   div(class="header__inner")
     div(class="block__inner header__description")
       h1(class="header__title block__title") 

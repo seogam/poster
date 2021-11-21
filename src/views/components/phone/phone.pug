@@ -6,9 +6,9 @@
   ]
 
 mixin phone(phoneClass)
-  div(class="phone")
-    div(class="phone__title") Telefon raqamlar:
-    ul(class="phone__list phone--" + phoneClass)
+  div(class="phone phone--" + phoneClass)
+    div(class="phone__title phone__title--" + phoneClass ) Telefon raqamlar:
+    ul(class="phone__list phone__list--" + phoneClass)
       each item in phones 
         li(class="phone__item phone__item--" + phoneClass + "")
           a(href="tel:" + item.phone, class="phone__text phone__text--" + phoneClass)=item.phone

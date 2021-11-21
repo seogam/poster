@@ -10,9 +10,15 @@
   transition: all 0.5s ease
   
   &--signup
-    margin-right: 15px
+    
     background-color: #4a90e2
     color: $colorWhite
+    @media (min-width: 481px)
+      &
+        margin-right: 15px
+    @media (max-width: 480px)
+      &
+        margin-bottom: 15px
 
     &:hover
       background-color: #3375c3
