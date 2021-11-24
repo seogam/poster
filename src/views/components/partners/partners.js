@@ -1,7 +1,8 @@
 $('.partners__list').slick({
   infinite: true,
-  slidesToShow: 5,
-  slidesToScroll: 1,
+  slidesToShow: 7,
+  slidesToScroll: 3,
+  autoplay: true,
   dots: true,
   responsive: [
     {

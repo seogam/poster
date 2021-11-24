@@ -37,7 +37,7 @@ let streamPug = () => {
 }
 
 let streamImages = () => {
-  return src('./src/assets/images/*.+(jpg|png|svg)')
+  return src('./src/assets/images/*.+(jpg|jpeg|png|svg)')
   .pipe(dest(`${outFolder}/assets/images`))
 }
 
