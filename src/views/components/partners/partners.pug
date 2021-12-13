@@ -1,29 +1,22 @@
 -
   var partnersItem = [
-    {id: 1, src:'./assets/images/angels-pizza-logo.jpg'},
-    {id: 2, src:'./assets/images/black-bear-kofi-logo.png'},
-    {id: 3, src:'./assets/images/sushi-xl.jpg'},
-    {id: 10, src:'./assets/images/socials-cafe.png'},
-    {id: 4, src:'./assets/images/ice-and-gold.png'},
-    
-    {id: 6, src:'./assets/images/dolce-italia.png'},
-    {id: 7, src:'./assets/images/stuzzico.png'},
-
-   
-    {id: 11, src:'./assets/images/arrows-sparrows.png'},
-    
-    {id: 13, src:'./assets/images/a-cafe.png'},
-    {id: 15, src:'./assets/images/teppanyaki.png'},
-    
-    {id: 17, src:'./assets/images/sushi-time.png'},
-
-
-    {id: 5, src:'./assets/images/tims-coffee.png'},
-    {id: 8, src:'./assets/images/grand-somsa.jpg'},
-    {id: 9, src:'./assets/images/coffewine.jpg'},
-    {id: 12, src:'./assets/images/caffelito.jpg'},
-    {id: 16, src:'./assets/images/cozy-grill-bar.jpeg'},
-    {id: 14, src:'./assets/images/krusty-krab.png'},
+    {id: 1, title: "Angels Pizza", src:'./assets/images/angels-pizza-logo.jpg'},
+    {id: 2, title: "Black Bear Kofi", src:'./assets/images/black-bear-kofi-logo.png'},
+    {id: 3, title: "Sushi xl", src:'./assets/images/sushi-xl.jpg'},
+    {id: 10, title: "Socials cafe", src:'./assets/images/socials-cafe.png'},
+    {id: 4, title: "Ice and Gold", src:'./assets/images/ice-and-gold.png'},    
+    {id: 6, title: "Dolce Italia", src:'./assets/images/dolce-italia.png'},
+    {id: 7, title: "Stuzzico", src:'./assets/images/stuzzico.png'},
+    {id: 11, title: "Arrows Sparrows", src:'./assets/images/arrows-sparrows.png'},
+    {id: 13, title: "A cafe", src:'./assets/images/a-cafe.png'},
+    {id: 15, title: "Teppanyaki", src:'./assets/images/teppanyaki.png'},
+    {id: 17, title: "Sushi Time", src:'./assets/images/sushi-time.png'},
+    {id: 5, title: "Tims Coffee", src:'./assets/images/tims-coffee.png'},
+    {id: 8, title: "Grand Somsa", src:'./assets/images/grand-somsa.jpg'},
+    {id: 9, title: "Coffewine", src:'./assets/images/coffewine.jpg'},
+    {id: 12, title: "Caffelito", src:'./assets/images/caffelito.jpg'},
+    {id: 16, title: "Cozy Grill Bar", src:'./assets/images/cozy-grill-bar.jpeg'},
+    {id: 14, title: "Krusty Krab", src:'./assets/images/krusty-krab.png'},
   ]
 
 mixin partners(blockTitle)
@@ -34,4 +27,4 @@ mixin partners(blockTitle)
         ul(class="partners__list")
           each item in partnersItem
             li(class="partners__item")
-              img(src=item.src, class="partners__image", alt="")
+              img(src=item.src, class="partners__image", alt=item.title)

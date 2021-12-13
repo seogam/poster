@@ -19,7 +19,7 @@ mixin program(title)
             h4(class="program__name")=item.name
 
             div(class="program__icon")
-              img(src=item.image, alt="")
+              img(src=item.image, alt=item.title)
               
             div(class="text program__text")
               p=item.text

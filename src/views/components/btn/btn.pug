@@ -1,8 +1,8 @@
 mixin btn(href, title, fancybox)
   if fancybox
-    a(href=href, class!=attributes.class data-fancybox)
+    a(href=href, class!=attributes.class, target="_blank" data-fancybox)
       span=title
   else 
-    a(href=href, class!=attributes.class)
+    a(href=href, class!=attributes.class, target="_blank")
       span=title
   
