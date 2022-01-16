@@ -12,14 +12,13 @@ footer(class="block footer")
     div(class="footer__logo")
       img(src="./assets/images/logo-w.png", alt="Poster - Kafe avtomatizatsiyasi")
       div(class="footer__text") Kafe uchun onlayn to'lov: Android planshet yoki iPad uchun dastur va oyiga atigi 19 dollar.
-    //- +menu('footer-menu', footerItemsMenu)
-
-    //- nav
-    //-   ul(class="footer__menu menu")
-    //-     each item in footerMenuItem
-    //-       li(class="menu__item")
-    //-         a(class="menu__link" href=item.url)=item.name
-    
     +work-time("Ish tartibi:", 'footer')
     +phone('footer')
     +address("16 Afrosiyob ko'chasi, Tashkent 100015", 'footer')
+  
+  div(class="footer__copyright block__inner")
+    p @All right Reserved. Bar Code Technologies dealer of Poster POS inc. in Uzbekistan.
+    p Phone 
+      a(href="tel:+998900080115") +998900080115 
+      | E-mail: 
+      a(href="mailto:info@bct.uz") Info@bct.uz 

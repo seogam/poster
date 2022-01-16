@@ -5,9 +5,10 @@
     {id: 3, phone: '+(99890) 008 01 15',},
   ]
 
-mixin phone(phoneClass)
+mixin phone(phoneClass, title)
   div(class="phone phone--" + phoneClass)
-    div(class="phone__title phone__title--" + phoneClass ) Telefon raqamlar:
+    if title
+      div(class="phone__title phone__title--" + phoneClass )=title
     ul(class="phone__list phone__list--" + phoneClass)
       each item in phones 
         li(class="phone__item phone__item--" + phoneClass + "")

@@ -5,6 +5,7 @@ mixin question(title)
         div(class="question__title")=title 
         div(class="text question__text")
           block
+          +phone('question')
       div(class="question__right")
         +btn("https://telegram.im/@Poster_uzb", "Murojaat qoldirish")(class="question__btn btn btn--telegram")
 

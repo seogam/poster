@@ -16,19 +16,19 @@ header(class="header")
       //- +menu('menu-header', topMenuLi)
       +work-time("Ish tartibi:", 'header')
       +address("Tashkent, 16 Afrosiyob ko'chasi 100015", 'header')
-      +phone('header')
+      +phone('header', 'Telefon raqamlar:')
     
   div(class="header__inner")
     div(class="block__inner header__description")
       h1(class="header__title block__title") 
-        | Kafe avtomatizatsiyasi
+        | O'zbekiston uchun kafe avtomatizatsiyasi
       div(class="header__text")
         p Kafe uchun onlayn to'lov: Android planshet yoki iPad uchun dastur va oyiga atigi 19 dollar.
 
       div(class="header__btns")
         +btn("https://joinposter.com/signup/?ref=bct", "Bepul sinab korish", false)(class="btn btn--signup")
         +btn("https://poster-uzbekistan.academyocean.com/auth/sign/in", "O'quv kursi", false)(class="btn btn--green")
-        
+        +btn("https://joinposter.com/?ref=bct", "Русская версия", false)(class="btn btn--border")
         +btn("https://www.youtube.com/watch?v=yV2180lUlaA", "Video ko'rish", true)(class="btn btn--video")
           svg#Capa_1(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 60 60' style='enable-background:new 0 0 60 60;' xml:space='preserve')
             g
